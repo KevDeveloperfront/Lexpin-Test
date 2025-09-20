@@ -41,10 +41,11 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
+    gap: 2rem; /* Espacio entre los elementos del menú */
 }
 
 .nav-menu li {
-    margin-left: 1.5rem;
+    margin-left: 3.5rem;
 }
 
 .nav-menu a {
@@ -78,8 +79,8 @@ body {
 .hero {
     text-align: center;
     padding: 6rem 1rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('/src/assets/imagenes/hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('/src/assets/imagenes/hero-bg.jpg') no-repeat center center/cover;
     color: white;
 }
 
@@ -225,36 +226,37 @@ footer {
     .menu-toggle {
         display: flex;
     }
-    
+
     .nav-menu {
         position: fixed;
-        left: -100%;
         top: 70px;
-        flex-direction: column;
-        background-color: #fff;
+        left: -100%;
         width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
         padding: 2rem 0;
+        transition: 0.3s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
-    
+
     .nav-menu.active {
         left: 0;
     }
-    
-    .nav-menu li {
-        margin: 1.5rem 0;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
 }
+
+.nav-menu li {
+    margin: 1.5rem 0;
+}
+
+.hero h1 {
+    font-size: 2rem;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
 
 /* Animaciones */
 @keyframes fadeIn {
@@ -262,6 +264,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
