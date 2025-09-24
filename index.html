@@ -2,91 +2,96 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Proyecto de práctica para aprender desarrollo frontend">
-    <link rel="stylesheet" href="/src/styles/style.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <title>Proyecto Práctica Frontend</title>
+	<!--Metadatos esenciales para SEO y accesibilidad-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Proyecto de práctica para aprender desarrollo frontend">
+	<!--Enlace a la hoja de estilos CSS-->
+	<link rel="stylesheet" href="./src/styles/style.css">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<!-- En tu <head> -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<title>Proyecto Práctica Frontend</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="/index.html" class="logo">
-                <img src="/src/assets/imagenes/logo sin fondo.png" alt="Logo principal">
-            </a>
-            <button class="menu-toggle" aria-label="Abrir menú de navegación">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="#features">Características</a></li>
-                <li><a href="#about">Acerca de</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+	<header>
+		<nav class="navbar">
+			<a href="/index.html" class="logo">
+				<img src="./src/assets/imagenes/logo sin fondo.png" alt="Logo principal">
+			</a>
+			<button class="menu-toggle" aria-label="Abrir menú de navegación">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<ul class="nav-menu" id="nav-menu">
+				<li><a href="/index.html">Inicio</a></li>
+				<li><a href="#features">Características</a></li>
+				<li><a href="#about">Acerca de</a></li>
+				<li><a href="#contact">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
 
-    <main class="principal">
-        <section class="hero">
-            <div class="container">
-                <h1>Bienvenido a mi Proyecto</h1>
-                <p>Este es un proyecto de práctica para aprender HTML y CSS.</p>
-                <a href="#features" class="btn">Descubre más</a>
-            </div>
-        </section>
+	<main class="principal">
+		<section class="hero">
+			<div class="container">
+				<h1>Bienvenido a mi Proyecto</h1>
+				<p>Este es un proyecto de práctica para aprender HTML y CSS.</p>
+				<a href="#features" class="btn">Descubre más</a>
+			</div>
+		</section>
 
-        <section id="features" class="features">
-            <div class="container">
-                <h2>Características Principales</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">📷</div>
-                        <h3>Característica 1</h3>
-                        <p>Descripción detallada de la característica 1. Explica qué hace y por qué es importante.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🖼️</div>
-                        <h3>Característica 2</h3>
-                        <p>Descripción detallada de la característica 2. Incluye los beneficios que ofrece.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">✨</div>
-                        <h3>Característica 3</h3>
-                        <p>Descripción detallada de la característica 3. Destaca qué hace única esta función.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+		<section id="features" class="features">
+			<div class="container">
+				<h2>Características Principales</h2>
+				<div class="features-grid">
+					<div class="feature-card">
+						<div class="feature-icon">📷</div>
+						<h3>Característica 1</h3>
+						<p>Descripción detallada de la característica 1. Explica qué hace y por qué es importante.</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">🖼️</div>
+						<h3>Característica 2</h3>
+						<p>Descripción detallada de la característica 2. Incluye los beneficios que ofrece.</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">✨</div>
+						<h3>Característica 3</h3>
+						<p>Descripción detallada de la característica 3. Destaca qué hace única esta función.</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2>Acerca de este proyecto</h2>
-                <p>Este es un proyecto de práctica personal para mejorar mis habilidades en desarrollo frontend. Estoy
-                    aprendiendo HTML, CSS y pronto JavaScript.</p>
-            </div>
-        </section>
+		<section id="about" class="about">
+			<div class="container">
+				<h2>Acerca de este proyecto</h2>
+				<p>Este es un proyecto de práctica personal para mejorar mis habilidades en desarrollo frontend. Estoy
+					aprendiendo HTML, CSS y pronto JavaScript.</p>
+			</div>
+		</section>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Contacto</h2>
-                <p>¿Tienes preguntas o sugerencias? No dudes en contactarme.</p>
-                <a href="mailto:tuemail@ejemplo.com" class="btn">Enviar email</a>
-            </div>
-        </section>
-    </main>
+		<section id="contact" class="contact">
+			<div class="container">
+				<h2>Contacto</h2>
+				<p>¿Tienes preguntas o sugerencias? No dudes en contactarme.</p>
+				<a href="mailto:tuemail@ejemplo.com" class="btn">Enviar email</a>
+			</div>
+		</section>
+	</main>
 
-    <footer>
-        <div class="container">
-            <p>Proyecto de práctica para desarrollo frontend - 2025</p>
-        </div>
-    </footer>
+	<footer>
+		<div class="container">
+			<p>Proyecto de práctica para desarrollo frontend - 2025</p>
+			<p>Curso Lexpin 2025</p>
+		</div>
+	</footer>
 
-    <script src="/src/components/js/script_toggle.js"></script>
+	<script src="/src/components/js/script_toggle.js"></script>
 </body>
 
 </html>
