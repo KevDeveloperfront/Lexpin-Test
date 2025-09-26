@@ -1,18 +1,30 @@
-// 1. Seleccionar el botón y el menú
+// 1. Seleccionar el botón del menú hamburguesa y el menú
 const boton = document.querySelector(".menu-toggle");
 const menu = document.getElementById("nav-menu");
 
-// 2. Escuchar el clic en el botón
+// 2. Cuando se hace clic en el botón, mostrar u ocultar el menú
 boton.addEventListener("click", () => {
-  // 3. Alternar la clase 'active' en el menú
-  menu.classList.toggle("active");
+    menu.classList.toggle("active");
+});
 
-  // Cerrar menú al hacer clic en un enlace (solo en móvil)
-  const enlaces = document.querySelectorAll(".nav-menu a");
+// 3. Manejar clics en enlaces con anclaje (#) para desplazamiento suave
+const enlaces = document.querySelectorAll('a[href^="#"]');
+enlaces.forEach((enlace) => {
+    enlace.addEventListener("click", (e) => {
+        e.preventDefault(); // Evita el salto instantáneo del navegador
+        const targetId = enlace.getAttribute("href"); // Obtiene el ID (ej. #resources)
+        const targetElement = document.querySelector(targetId); // Busca el elemento con ese ID
 
-  enlaces.forEach((enlace) => {
-    enlace.addEventListener("click", () => {
-      menu.classList.remove("active");
+        if (targetElement) {
+            const offset = 80; // Ajusta según la altura de tu barra de navegación
+            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({
+                top: elementPosition - offset, // Desplaza al elemento, compensando la navbar
+                behavior: "smooth" // Hace el desplazamiento suave
+            });
+        }
+
+        // Cierra el menú en móviles después de hacer clic en un enlace
+        menu.classList.remove("active");
     });
-  });
 });
