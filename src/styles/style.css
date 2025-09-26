@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    /* Respaldo para navegadores que no usen JS */
+}
+
 body {
     font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -240,6 +245,16 @@ footer {
     color: white;
 }
 
+/* Compensar la barra de navegación fija para anclajes */
+[id="resources"],
+[id="about"],
+[id="contact"] {
+    padding-top: 80px;
+    /* Ajusta según la altura de tu navbar */
+    margin-top: -80px;
+    /* Compensa el padding para alinear correctamente */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -255,7 +270,7 @@ footer {
         flex-direction: column;
         align-items: center;
         padding: 2rem 0;
-        transition: 0.3s ease;
+        transition: left 0.3s ease;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
