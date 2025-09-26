@@ -8,7 +8,6 @@
 
 html {
     scroll-behavior: smooth;
-    /* Respaldo para navegadores que no usen JS */
 }
 
 body {
@@ -161,8 +160,9 @@ body {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
+    padding: 0 10px;
 }
 
 .feature-card {
@@ -250,9 +250,7 @@ footer {
 [id="about"],
 [id="contact"] {
     padding-top: 80px;
-    /* Ajusta según la altura de tu navbar */
     margin-top: -80px;
-    /* Compensa el padding para alinear correctamente */
 }
 
 /* Responsive Design */
@@ -269,7 +267,7 @@ footer {
         background-color: #fff;
         flex-direction: column;
         align-items: center;
-        padding: 2rem 0;
+        padding: 1.5rem 0;
         transition: left 0.3s ease;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
@@ -279,11 +277,15 @@ footer {
     }
 
     .nav-menu li {
-        margin: 1.5rem 0;
+        margin: 1rem 0;
+    }
+
+    .nav-menu a {
+        font-size: 1.1rem;
     }
 
     .hero {
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
     }
 
     .hero h1 {
@@ -291,21 +293,50 @@ footer {
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
-    .features,
-    .about,
-    .contact {
+    .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .features {
         padding: 2rem 0;
     }
 
+    .features h2 {
+        font-size: 1.8rem;
+    }
+
     .features-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
         gap: 1rem;
+        padding: 0 5px;
     }
 
     .feature-card {
         padding: 1rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .feature-card p {
+        font-size: 0.9rem;
+    }
+
+    .about, .contact {
+        padding: 2rem 0;
+    }
+
+    .about h2, .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .about p, .contact p {
+        font-size: 0.95rem;
     }
 }
 
@@ -315,7 +346,6 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
